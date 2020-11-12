@@ -3,8 +3,9 @@
   background-position: center;
   height: 180px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  text-align: center;
   color: white;
   font-size: 24px;
   font-weight: bold;
@@ -16,7 +17,7 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 30px;
 }
 
 // Smallest device
