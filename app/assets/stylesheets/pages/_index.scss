@@ -1,12 +1,23 @@
 // Import page-specific CSS files here.
 @import "home";
-
+@import "show";
 .row {
     display: flex;
     justify-content: space-around;
 }
 
-.btn a {
+.container .mt-5 {
+  display: flex;
+}
+
+.btn-outline-secondary a {
   text-decoration: none;
   color: white;
+}
+
+.btn-outline-dark a {
+  text-decoration: none;
+  color: black;
+  position:relative;
+  margin: 0 auto;
 }

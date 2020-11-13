@@ -23,6 +23,8 @@ class CocktailsController < ApplicationController
 
   def show
     @cocktail = Cocktail.find(params[:id])
+    @ingredients = Ingredient.all
+    @dose = Dose.new
   end
 
   def update
@@ -30,9 +32,10 @@ class CocktailsController < ApplicationController
     @cocktail.update(set_params)
   end
 
-  def delete
+  def destroy
     @cocktail = Cocktail.find(params[:id])
     @cocktail.destroy
+    redirect_to root_path
   end
 
   private

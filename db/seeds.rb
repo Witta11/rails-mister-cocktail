@@ -12,6 +12,7 @@ list = ingredients["drinks"]
 puts "Cleaning database..."
 Ingredient.destroy_all
 Cocktail.destroy_all
+Dose.destroy_all
 sleep 1
 
 puts "Creating data..."
@@ -24,29 +25,10 @@ sleep 2
 
 puts "Finished! #{Ingredient.count} - ingredients created"
 
-
-#puts "getting cocktail names..."
-
-#url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita'
-#list_serialized = open(url).read
-#ingredients = JSON.parse(list_serialized)
-#name = ingredients["drinks"]
-
-#puts "Cleaning database..."
-#Cocktail.destroy_all
-#sleep 1
-
-#puts "Creating data..."
-
-#name.each do |ingredient|
-  #Cocktail.create!(name: ingredient["strDrink"])
-#end
-
-#sleep 2
-
-#puts "Finished! #{Cocktail.count} - cocktails created"
-
 drinks = ['Mojito', 'Long Island Iced Tea', 'Manhattan', 'Daiquiri', 'Margarita', 'Bloody Mary', 'Cosmopolitan', 'Sangria', 'Moscow Mule', 'Screwdriver', 'Tequila Sunrise', 'Martini']
 drinks.each do |drink|
-  Cocktail.create!({:name => drink})
+  Cocktail.create!({ :name => drink })
 end
+
+puts 'Drink Names loaded...'
+

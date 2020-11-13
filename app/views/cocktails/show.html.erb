@@ -1,3 +1,28 @@
 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1486428263684-28ec9e4f2584?ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80)">
   <%= @cocktail.name %>
 </div>
+
+<div class="container mt-5">
+  <div class="links">
+    <%= link_to 'Delete Cocktail', cocktail_path(@cocktail), method: :delete, data: {confirm: 'Do you REALLY wanna delete this Cocktail?'} %>
+    <%= link_to 'Home', root_path, class: 'btn btn-primary' %>
+  </div>
+  <h1>Your <%= @cocktail.name %> is made out of:</h1>
+  <% @cocktail.doses.each do |dose| %>
+    <div class="card-product">
+      <img src="https://images.unsplash.com/photo-1531002329786-97e3efcb754b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" />
+      <div class="card-product-infos">
+        <h2><%= dose.description %></h2>
+        <h3><%= dose.ingredient.name %></h3>
+        <%= link_to "delete", dose_path(dose), method: :delete, data: { confirm: "Do you really want to delete this ingredient?" } %>
+      </div>
+    </div>
+  <% end %>
+
+  <h2>Add Ingredients</h2>
+  <%= simple_form_for([@cocktail, @dose]) do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient %>
+  <%= f.submit 'Create the Dose', class: 'btn btn-primary' %>
+  <% end %>
+</div>
