@@ -1,6 +1,6 @@
 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
 url(
-<% if @cocktail.photo.attached?%>
+<% if @cocktail.photo.attached? %>
 <%= cl_image_path @cocktail.photo.key, crop: :fill %>
 <% else %>
 <%= "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2761&q=80" %>
