@@ -11,3 +11,18 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+#footer {
+  border-top: 1px solid grey;
+  padding: 24px;
+}
+
+#footer a {
+  color: black;
+  opacity: 1;
+}
+
+#footer a:hover {
+  color: grey;
+  opacity: 0.5;
+}
