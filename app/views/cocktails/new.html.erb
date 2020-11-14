@@ -2,7 +2,11 @@
   <h1>Create a new Cocktail</h1>
   <%= simple_form_for(@cocktail) do |f| %>
   <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit 'Add Cocktail', class: 'btn btn-primary' %>
+  <%= f.input :photo, as: :file, class: 'btn btn-outline-dark' %>
+  <%= f.submit 'Add Cocktail', class: 'create btn btn-outline-dark' %>
+  <%= link_to 'Go Back', root_path, class: 'btn btn-outline-dark' %>
   <% end %>
+  <div id="banner-new">
+    <%= cl_image_tag("clzl815dtiox9kzbyl9p", class: 'banner-new') %>
+  </div>
 </div>

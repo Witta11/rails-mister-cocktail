@@ -1,27 +1,4 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "show";
-
-.container .mt-5 {
-  display: flex;
-}
-
-.btn-outline-secondary a {
-  text-decoration: none;
-  color: white;
-}
-
-.btn-outline-dark a {
-  text-decoration: none;
-  color: black;
-  position:relative;
-  margin: 0 auto;
-}
-
-.btn-outline-dark a:hover {
-  color: white;
-}
-
-.btn-outline-dark {
-  margin: 24px;
-}
+@import "new";
