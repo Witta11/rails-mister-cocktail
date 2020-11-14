@@ -25,7 +25,7 @@ sleep 2
 
 puts "Finished! #{Ingredient.count} - ingredients created"
 
-drinks = ['Mojito', 'Long Island Iced Tea', 'Manhattan', 'Daiquiri', 'Margarita', 'Bloody Mary', 'Cosmopolitan', 'Sangria', 'Moscow Mule', 'Screwdriver', 'Tequila Sunrise', 'Martini']
+drinks = ['Mojito', 'Long Island', 'Manhattan', 'Daiquiri', 'Margarita', 'Bloody Mary', 'Cosmopolitan', 'Sangria', 'Moscow Mule', 'Screwdriver', 'Tequila Sunrise', 'Martini']
 drinks.each do |drink|
   Cocktail.create!({ :name => drink })
 end
